@@ -1,4 +1,4 @@
-# Tidewater Oyster Garden — site
+# Northern Neck VA Oyster Garden — site
 
 A 4-page static site (Home, Cohorts, Blog, Donate) for tracking an oyster
 garden's cohorts on the Potomac. Pure HTML/CSS + a little vanilla JS —

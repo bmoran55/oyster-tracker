@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Tidewater Oyster Garden — stylesheet
+   Northern Neck VA Oyster Garden — stylesheet
    A field-notebook aesthetic for a citizen-science oyster garden on the
    Potomac. Signature element: the "tide line" — a wavy rule that separates
    sections, and a vertical tide gauge that tracks cohort update history.
@@ -126,7 +126,7 @@ ul{ padding-left: 1.2em; }
   letter-spacing: -.01em;
 }
 .brand:hover{ color: var(--white); }
-.brand-mark{ width: 30px; height: 30px; flex-shrink: 0; }
+.brand-mark{ width: 30px; height: 30px; flex-shrink: 0; object-fit: contain; border-radius: 50%; }
 .brand small{
   display: block; font-family: var(--font-mono); font-weight: 400;
   font-size: .62rem; letter-spacing: .1em; text-transform: uppercase;
