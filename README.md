@@ -1,4 +1,4 @@
-# Northern Neck VA Oyster Garden — site
+# Tidewater Oyster Garden — site
 
 A 4-page static site (Home, Cohorts, Blog, Donate) for tracking an oyster
 garden's cohorts on the Potomac. Pure HTML/CSS + a little vanilla JS —
@@ -33,19 +33,21 @@ No build tools, no `npm install` — it's ready to serve as-is.
 ## Swapping in your own photos
 
 Every image in `images/` is a generated placeholder labeled with exactly
-what should replace it (e.g. "Add photo: 2025 cohort hero shot") and its
-own file path. **Keep the same filename and folder**, and your photo will
-drop right in — no HTML edits needed. For example, to replace the June 2025
-update's second photo, just overwrite:
+what should replace it (e.g. "Add photo: cohort 2025, 2026-08-07, photo 1")
+and its own file path. **Keep the same filename and folder**, and your
+photo will drop right in — no HTML edits needed. Update photos are named
+by cohort and date: `update-YYYY-MM-DD-0N.jpg`. For example, to replace
+the second photo from the August 7, 2026 update on Cohort 2025, just
+overwrite:
 
 ```
-images/cohort-2025/update1-02.jpg
+images/cohort-2025/update-2026-08-07-02.jpg
 ```
 
 with your own photo, keeping the same filename. Any standard photo editor
-or `cp your-photo.jpg images/cohort-2025/update1-02.jpg` on the command
-line works. Images are shown at roughly a 4:3 crop, so photos close to that
-ratio will look best.
+or `cp your-photo.jpg images/cohort-2025/update-2026-08-07-02.jpg` on the
+command line works. Images are shown at roughly a 4:3 crop, so photos
+close to that ratio will look best.
 
 ## Adding a new cohort update
 
@@ -68,6 +70,35 @@ directly (`cohort-2026.html#update-2026-10`).
 Copy an `<article class="post">` block in `blog.html`, give it a new `id`,
 and add a line to the table of contents (`.post-toc`) at the top of the
 page pointing to that `id`.
+
+## Data notes from the spreadsheet import
+
+The Cohorts pages were populated from `Oyster_working_data_for_AI.xlsx`
+(2025 and 2026 tabs). A few things were flagged rather than silently
+corrected, worth checking against your original records:
+
+- **Two date typos, corrected on the site:** Cohort 2025's first entry
+  was dated 2026-05-20 in the sheet (should almost certainly be
+  2025-05-20, the cohort's start); and one entry was dated 2206-08-07
+  (should almost certainly be 2026-08-07). Both are shown corrected,
+  with a note on the August 7 entry.
+- **Mortality of "-142"** on Cohort 2025's May 16, 2026 entry isn't a
+  meaningful value — it's called out as a data note on that update
+  rather than displayed as a stat. The count itself (142, down from 405)
+  is shown as recorded.
+- **Unit inconsistency:** "Largest Oyster Weight" is recorded in grams
+  and "Smallest Oyster Weight" in ounces in the source sheet. Both are
+  shown with their sheet-recorded units, but a few smallest-weight
+  values (e.g. 31–32 oz, 1–1.25 oz) look like they may actually be grams
+  too, given how they compare to the largest oyster's weight. Flagged
+  in-page with a small note; worth double-checking against your scale
+  readings.
+- **Cohort 2026's largest diameter** dropped from 2⅜ in (Aug 26) to
+  1¾ in (Sep 11) — plausible if a different oyster was measured each
+  time, but flagged in-page in case it's a transcription slip.
+
+None of these were guessed at or silently fixed — they're shown as
+recorded, with the anomaly noted alongside.
 
 ## Notes
 

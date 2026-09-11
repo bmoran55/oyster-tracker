@@ -1,4 +1,4 @@
-// Northern Neck VA Oyster Garden — shared site behavior
+// Tidewater Oyster Garden — shared site behavior
 // Vanilla JS only: mobile nav toggle, active-link highlighting,
 // and a gentle scroll reveal for sections (skipped for reduced-motion users).
 
